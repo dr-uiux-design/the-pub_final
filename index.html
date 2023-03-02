@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Pub - Бар-квартира на Петроградке</title>
+	<meta name="description"
+		content="Мы создали бар с домашней и по-настоящему уютной атмосферой в самом центре Петроградской стороны. Для любителей футбола и хоккея прямые трансляции каждый день на двух этажах нашего бара!ЖИВОЙ ЗВУК в ThePUB - По выходным вас ждет живая музыка.">
+	<meta name="keywords" content="">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+	<link rel="manifest" href="./favicon/site.webmanifest">
+	<link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#fff">
+	<meta name="msapplication-TileColor" content="#19191c">
+	<meta name="theme-color" content="#19191c">
+
+	<!----------- CSS ------------->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+	<link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/main.min.css">
+
+	<script>
+		// Preloader
+		window.onload = function () {
+			document.body.classList.add('loaded_hiding');
+			window.setTimeout(function () {
+				document.body.classList.add('loaded');
+				document.body.classList.remove('loaded_hiding');
+			}, 500);
+		}
+	</script>
+</head>
+
+<!----------- Body ------------->
+
+<body class="body page__body">
+
+	<!-- Preloader -->
+	<div class="preloader">
+		<div class="preloader__content">
+			<div class="preloader__dots">
+				<span></span><span></span><span></span><span></span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Кнопка Наверх -->
+	<!-- <button class="btn-top" title="Наверх"></button> -->
+	<!-- / Кнопка Наверх -->
+
+	<!-- Modal Start -->
+	<div class="modal modal-start is-hide">
+		<div class="modal-start__overlay">
+			<div class="modal__body text-center">
+				<div class="modal__logo"><img src="img/logo.png" width="105" height="100" alt="The Pub"></div>
+				<div class="modal__title">Добро пожаловать!</div>
+				<div class="modal__descr">Прежде чем войти на наш сайт, мы должны убедиться, что вам есть 18 лет. Наш сайт содержит информацию,
+					не рекомендованных для лиц, не достигших совершеннолетия. Сведения, размещённые на сайте, носят исключительно информационный
+					характер и предназначены только для личного использования.</div>
+				<button class="btn btn__outline modal__btn modal-start__btn">Мне уже исполнилось 18 лет</button>
+			</div>
+		</div>
+	</div>
+	<!-- End Modal Start -->
+
+	<!-- Кнопка - Обратного звонка -->
+	<div class="callback">
+		<div class="callback__btn">
+			<div class="callback__btn-icon"></div>
+			<div class="callback__btn-text">
+				<span>Бронь<br>стола</span>
+			</div>
+		</div>
+		<div class="callback__poppup">
+			<div class="callback__poppup-close"></div>
+			<div class="callback__poppup-title">Бронь стола:</div>
+			<a href="tel:+79219973198" class="callback__poppup-phone" title="Позвонить"><i class="phone-icon"></i>+7 921 997-31-98</a>
+
+			<ul class="time-work callback__poppup-time-work">
+				<li class="time-work__item">Пн-Ср: с 15:00 до 3:00</li>
+				<li class="time-work__item">Чт-Сб: с 15:00 до 6:00</li>
+				<li class="time-work__item">Вс: с 15:00 до 3:00</li>
+			</ul>
+		</div>
+	</div>
+	<!-- / Кнопка - Обратного звонка -->
+
+	<!-- Песня -->
+	<div class="player">
+		<audio class="player__audio" src="./audio/thepub.mp3"> </audio>
+		<div class="player__btn btn-play"></div>
+		<div class="player__btn btn-pause is-hidden"></div>
+		<div class="player__text">Наша <br> песня</div>
+	</div>
+
+	<!----------- Wrapper ------------->
+	<div class="page__wrapper">
+
+		<!----------- Main ------------->
+		<main class="page__main">
+
+			<!----------- Шапка ------------->
+			<section class="hero">
+				<!-- Header -->
+				<header class="header">
+
+					<div class="header__top">
+						<div class="container header__container">
+							<div class="menu-burger">
+								<span></span><span></span><span></span>
+							</div>
+
+							<nav class="header__menu menu">
+								<ul class="menu__list">
+									<li class="menu__item"><a class="menu__link" href="#about">О нас</a></li>
+									<li class="menu__item"><a class="menu__link" href="#bar-menu">Меню</a></li>
+									<li class="menu__item"><a class="menu__link" href="#portfolio">Фотографии</a></li>
+									<!-- <li class="menu__item"><a class="menu__link" href="#events">Мероприятия</a></li> -->
+									<li class="menu__item"><a class="menu__link" href="#reviews">Отзывы</a></li>
+									<li class="menu__item"><a class="menu__link" href="#contacts">Контакты</a></li>
+								</ul>
+							</nav>
+							<ul class="header__social social">
+								<li class="social__item">
+									<a class="social__link" href="https://vk.com/barhata" target="_blank">
+										<svg class="social__icon ic-vk" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M20.5898 7.24594C20.7134 6.81625 20.5898 6.5 19.995 6.5H18.0268C17.5256 6.5 17.295 6.77156 17.1714 7.07406C17.1714 7.07406 16.1689 9.58687 14.7521 11.2162C14.2943 11.6872 14.0838 11.8384 13.8332 11.8384C13.7096 11.8384 13.5191 11.6872 13.5191 11.2575V7.24594C13.5191 6.73031 13.3788 6.5 12.9644 6.5H9.87017C9.55607 6.5 9.36894 6.74063 9.36894 6.96406C9.36894 7.45219 10.0773 7.56563 10.1509 8.94063V11.9244C10.1509 12.5775 10.0372 12.6978 9.78663 12.6978C9.11833 12.6978 7.49435 10.1747 6.53199 7.28719C6.33818 6.72688 6.14771 6.5 5.64314 6.5H3.67499C3.11361 6.5 3 6.77156 3 7.07406C3 7.61031 3.6683 10.2744 6.11096 13.7944C7.73828 16.1972 10.0306 17.5 12.1157 17.5C13.3687 17.5 13.5225 17.2113 13.5225 16.7128C13.5225 14.4166 13.4088 14.2 14.037 14.2C14.3278 14.2 14.829 14.3513 15.9985 15.5097C17.3351 16.8847 17.5557 17.5 18.3042 17.5H20.2723C20.8337 17.5 21.1177 17.2113 20.954 16.6406C20.5797 15.4409 18.0502 12.9728 17.9366 12.8078C17.6459 12.4228 17.7294 12.2509 17.9366 11.9072C17.9399 11.9038 20.3425 8.425 20.5898 7.24594V7.24594Z" />
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link" href="https://t.me/thepubspb" target="_blank">
+										<svg class="social__icon ic-telegram" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M20.9487 5.82646L18.2324 18.6365C18.0275 19.5406 17.493 19.7657 16.7336 19.3397L12.5948 16.2899L10.5978 18.2106C10.3768 18.4316 10.1919 18.6164 9.76602 18.6164L10.0634 14.4013L17.7341 7.46991C18.0677 7.17256 17.6618 7.00782 17.2158 7.30517L7.7328 13.2762L3.65029 11.9984C2.76227 11.7212 2.7462 11.1104 3.83513 10.6845L19.8035 4.5326C20.5429 4.25534 21.1898 4.69734 20.9487 5.82646V5.82646Z" />
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link" href="https://www.tiktok.com/@thepub.spb?_t=8aJOQC6FORm" target="_blank">
+										<svg class="social__icon ic-tiktok" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M16.3251 5.57508C15.4944 5.39241 14.7429 4.95128 14.1785 4.31499C13.6141 3.67871 13.2657 2.87997 13.1835 2.03341V1.66675H10.3085V13.0584C10.309 13.5639 10.1506 14.0567 9.85549 14.4671C9.56041 14.8775 9.14368 15.1847 8.66434 15.3451C8.185 15.5055 7.66733 15.511 7.18469 15.3608C6.70204 15.2107 6.27887 14.9124 5.97512 14.5084C5.70299 14.1508 5.53636 13.7241 5.49406 13.2767C5.45176 12.8293 5.53549 12.379 5.73577 11.9767C5.93605 11.5745 6.2449 11.2362 6.62738 11.0003C7.00987 10.7644 7.45073 10.6402 7.90012 10.6417C8.14865 10.6403 8.39595 10.6769 8.63345 10.7501V7.83341C8.35707 7.79919 8.07854 7.78526 7.80012 7.79175C6.77455 7.81915 5.77922 8.14503 4.93602 8.72947C4.09283 9.31392 3.43836 10.1316 3.05277 11.0823C2.66717 12.033 2.56719 13.0755 2.76505 14.0822C2.96292 15.0889 3.45005 16.016 4.16679 16.7501C4.90136 17.4969 5.84136 18.0085 6.86737 18.2199C7.89337 18.4313 8.95905 18.3329 9.929 17.9372C10.899 17.5416 11.7294 16.8665 12.3148 15.9978C12.9002 15.1291 13.2142 14.106 13.2168 13.0584V7.22508C14.3763 8.05337 15.7668 8.49645 17.1918 8.49175V5.65841C16.9119 5.65957 16.6326 5.63164 16.3585 5.57508H16.3251Z" />
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="header__bottom">
+						<div class="container header__container">
+							<a class="header__address" href="https://yandex.ru/maps/org/the_pub/1223769808/?ll=30.293117%2C59.956710&z=15"
+								target="_blank"><i class="icon-ui ic-loc"></i> г. Санкт-Петербург, <br>ул. Пионерская улица, дом 11</a>
+
+							<a href="/" class="header__logo">
+								<picture>
+									<source srcset="./img/logo.webp" type="image/webp">
+									<img loading="lazy" src="./img/logo.png" class="" width="105" height="100" alt="ThePub">
+								</picture>
+							</a>
+
+							<div class="header__phone">
+								<div class="header__phone-label">Бронь столиков</div>
+								<a href="tel:+79219973198" class="header__phone-link" title="Позвонить"><i class="phone-icon"></i>+7 921 997-31-98</a>
+							</div>
+						</div>
+					</div>
+				</header>
+				<!-- / Header -->
+
+				<!-- Video -->
+				<div class="hero__video">
+					<video loop="" muted="" autoplay="" poster="./img/hero-bg.jpg" class="hero__video">
+						<source src="./video/hero-video.mp4" type="video/mp4">
+						<source src="./video/hero-video.webp" type="video/webp">
+						<source src="./video/hero-bg.webp" type="image/webp">
+					</video>
+				</div>
+				<!-- / Video -->
+
+				<!-- Content -->
+				<div class="container">
+					<div class="hero__content">
+						<div class="hero__text">
+							<img class="hero__hello" src="img/hero-hello.svg" alt="">
+							<h1 class="hero__title"><span class="text-gold">ThePUB</span> на Петроградке</h1>
+							<p class="hero__descr">Отметить день рождения или другое событие, посмотреть футбольный матч, послушать живой звук -
+								WELCOME!
+							</p>
+						</div>
+
+						<div class="hero__btns btn-group">
+							<a href="#bar-menu" class="btn btn--green">Посмотреть меню</a>
+							<button class="btn js-modal-btn" data-modal-open="modal-bron">Забронировать столик</button>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="container">
+					<ul class="time-work hero__work">
+						<li class="time-work__item">Пн-Ср: с 15:00 до 3:00</li>
+						<li class="time-work__item">Чт-Сб: с 15:00 до 6:00</li>
+						<li class="time-work__item">Вс: с 15:00 до 3:00</li>
+					</ul>
+				</div>
+				<!-- / Content -->
+			</section>
+			<!----------- End Шапка ------------->
+
+			<!----------- О нас ------------->
+			<section class="sect-padd about" id="about">
+				<div class="container">
+					<div class="about__content">
+
+						<div class="about__left">
+							<div class="about__img br-32">
+								<picture>
+									<source srcset="./img/about/about-photo.webp" type="image/webp">
+									<img class="slider-img br-32" loading="lazy" src="./img/about/about-photo.jpg" width="" height="" alt="ThePub">
+								</picture>
+							</div>
+						</div>
+
+						<div class="about__right">
+							<div class="about__text br-32">
+								<h2 class="about__title">О нашей <br><span class="text-gold">бар-квартире</span></h2>
+								<p class="about__descr">Мы создали бар с домашней и по-настоящему уютной атмосферой в самом центре Петроградской
+									стороны.
+									Для любителей футбола и хоккея прямые трансляции каждый день на двух этажах нашего бара!ЖИВОЙ ЗВУК в ThePUB - По
+									выходным
+									вас ждет живая музыка.</p>
+
+								<button data-modal-open="modal-video" aria-expanded="true" aria-label="Смотреть видео" type="button"
+									class="btn btn__outline btn-video js-modal-btn">ВидеоТур
+									по нашему пабу
+									<svg class="btn-video__icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z"
+											fill="currentColor" />
+										<path d="M9 17L17 12L9 7V17Z" fill="currentColor" />
+									</svg>
+								</button>
+							</div>
+
+							<!-- Slider -->
+							<div class="slider slider-about">
+								<div class="slider-about__slide">
+									<div class="slider__item">
+										<a class="gallery-link" href="./img/about/about-slider_1.jpg" data-fancybox="gallery-about">
+											<picture>
+												<source srcset="./img/about/about-slider_1.webp" type="image/webp">
+												<img class="slider-img br-32" loading="lazy" src="./img/about/about-slider_1.jpg" width="" height="" alt=""
+													data-fancybox="gallery-about">
+											</picture>
+										</a>
+									</div>
+								</div>
+
+								<div class="slider-about__slide">
+									<div class="slider__item">
+										<a class="gallery-link" href="./img/about/about-slider_2.jpg" data-fancybox="gallery-about">
+											<picture>
+												<source srcset="./img/about/about-slider_2.webp" type="image/webp">
+												<img class="slider-img br-32" loading="lazy" src="./img/about/about-slider_2.jpg" width="" height="" alt=""
+													data-fancybox="gallery-about">
+											</picture>
+										</a>
+									</div>
+								</div>
+
+								<div class="slider-about__slide">
+									<div class="slider__item">
+										<a class="gallery-link" href="./img/about/about-slider_3.jpg" data-fancybox="gallery-about">
+											<picture>
+												<source srcset="./img/about/about-slider_3.webp" type="image/webp">
+												<img class="slider-img br-32" loading="lazy" src="./img/about/about-slider_3.jpg" width="" height="" alt=""
+													data-fancybox="gallery-about">
+											</picture>
+										</a>
+									</div>
+								</div>
+
+								<div class="slider-about__slide">
+									<div class="slider__item">
+										<a class="gallery-link" href="./img/about/about-slider_4.jpg" data-fancybox="gallery-about">
+											<picture>
+												<source srcset="./img/about/about-slider_4.webp" type="image/webp">
+												<img class="slider-img br-32" loading="lazy" src="./img/about/about-slider_4.jpg" width="" height="" alt=""
+													data-fancybox="gallery-about">
+											</picture>
+										</a>
+									</div>
+								</div>
+
+								<div class="slider-about__slide">
+									<div class="slider__item">
+										<a class="gallery-link" href="./img/about/about-slider_5.jpg" data-fancybox="gallery-about">
+											<picture>
+												<source srcset="./img/about/about-slider_5.webp" type="image/webp">
+												<img class="slider-img br-32" loading="lazy" src="./img/about/about-slider_5.jpg" width="" height="" alt=""
+													data-fancybox="gallery-about">
+											</picture>
+										</a>
+									</div>
+								</div>
+
+								<div class="slider-about__slide">
+									<div class="slider__item">
+										<a class="gallery-link" href="./img/about/about-slider_6.jpg" data-fancybox="gallery-about">
+											<picture>
+												<source srcset="./img/about/about-slider_6.webp" type="image/webp">
+												<img class="slider-img br-32" loading="lazy" src="./img/about/about-slider_6.jpg" width="" height="" alt=""
+													data-fancybox="gallery-about">
+											</picture>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!----------- End О нас ------------->
+
+			<!----------- Живая музыка ------------->
+			<section class="sect-padd music">
+				<div class="container music__container">
+					<div class="music__content">
+						<h2 class="music__title"><span class="text-gold">Живая музыка</span><br> каждую субботу в 22:00</h2>
+						<button type="button" class="btn music__btn js-modal-btn" data-modal-open="modal-bron">Забронировать столик</button>
+					</div>
+				</div>
+			</section>
+			<!----------- End Живая музыка ------------->
+
+			<!----------- Бар Меню ------------->
+			<section class="sect-padd bar-menu is-hidden">
+				<div class="container">
+					<h2 class="sect-title bar-menu__title"><span class="text-gold--dark">Меню</span> нашего паба</h2>
+
+					<div class="bar-menu__slider slider-menu">
+
+						<!-- Пиво -->
+						<div class="slider-menu__slide">
+							<div class="bar-menu__item br-32">
+								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/beer.jpg" alt="Пиво">
+								<h3 class="bar-menu__item-title">Пиво</h3>
+								<a href="./img/bar-menu/menu-list/beer-menu_1.jpg" class="btn btn--green bar-menu__item-btn" data-fancybox="gallery-menu">
+									<span class="btn-text">Смотреть меню</span>
+									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/beer-menu_1.jpg" alt="Пиво">
+								</a>
+								<a href="./img/bar-menu/menu-list/beer-menu_2.jpg" data-fancybox="gallery-menu">
+									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/beer-menu_2.jpg" alt="Пиво">
+								</a>
+							</div>
+						</div>
+
+						<!-- Горячие закуски -->
+						<div class="slider-menu__slide">
+							<div class="bar-menu__item br-32">
+								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/hot-snacks.jpg" alt="Горячие закуски">
+								<h3 class="bar-menu__item-title">Горячие закуски</h3>
+								<a href="./img/bar-menu/menu-list/hot-snacks-menu_1.jpg" class="btn btn--green bar-menu__item-btn"
+									data-fancybox="gallery-menu">
+									<span class="btn-text">Смотреть меню</span>
+									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/hot-snacks-menu_1.jpg" alt="Горячие закуски">
+								</a>
+								<a href="./img/bar-menu/menu-list/hot-snacks-menu_2.jpg" data-fancybox="gallery-menu">
+									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/hot-snacks-menu_2.jpg" alt="Горячие закуски">
+								</a>
+							</div>
+						</div>
+
+						<!-- Холодные закуски -->
+						<div class="slider-menu__slide">
+							<div class="bar-menu__item br-32">
+								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/cold-snacks.jpg" alt="Холодные закуски">
+								<h3 class="bar-menu__item-title">Холодные закуски</h3>
+								<a href="./img/bar-menu/menu-list/cold-snacks-menu.jpg" class="btn btn--green bar-menu__item-btn"
+									data-fancybox="gallery-menu">
+									<span class="btn-text">Смотреть меню</span>
+									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/cold-snacks-menu.jpg" alt="Холодные закуски">
+								</a>
+							</div>
+						</div>
+
+						<!-- Горячее -->
+						<div class="slider-menu__slide">
+							<div class="bar-menu__item br-32">
+								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/main-course.jpg" alt="Горячее">
+								<h3 class="bar-menu__item-title">Горячее</h3>
+								<a href="./img/bar-menu/menu-list/main-course-menu.jpg" class="btn btn--green bar-menu__item-btn"
+									data-fancybox="gallery-menu">
+									<span class="btn-text">Смотреть меню</span>
+									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/main-course-menu.jpg" alt="Горячее">
+								</a>
+							</div>
+						</div>
+
+						<!-- Street-Food -->
+						<div class="slider-menu__slide">
+							<div class="bar-menu__item br-32">
+								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/street-foot.jpg" alt="Street-Food">
+								<h3 class="bar-menu__item-title">Street food</h3>
+								<a href="./img/bar-menu/menu-list/street-food-menu.jpg" class="btn btn--green bar-menu__item-btn"
+									data-fancybox="gallery-menu">
+									<span class="btn-text">Смотреть меню</span>
+									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/street-food-menu.jpg" alt="Street-Food">
+								</a>
+							</div>
+						</div>
+
+						<!-- Салаты и соусы -->
+						<div class="slider-menu__slide">
+							<div class="bar-menu__item br-32">
+								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/salads.jpg" alt="Салат">
+								<h3 class="bar-menu__item-title">Салаты и соусы</h3>
+								<a href="./img/bar-menu/menu-list/salads-souce-menu.jpg" class="btn btn--green bar-menu__item-btn"
+									data-fancybox="gallery-menu">
+									<span class="btn-text">Смотреть меню</span>
+									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/salads-souce-menu.jpg" alt="Салат">
+								</a>
+							</div>
+						</div>
+
+						<!-- Супы -->
+						<div class="slider-menu__slide">
+							<div class="bar-menu__item br-32">
+								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/soups.jpg" alt="Суп">
+								<h3 class="bar-menu__item-title">Супы</h3>
+								<a href="./img/bar-menu/menu-list/soups-menu.jpg" class="btn btn--green bar-menu__item-btn" data-fancybox="gallery-menu">
+									<span class="btn-text">Смотреть меню</span>
+									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/soups-menu.jpg" alt="Суп">
+								</a>
+							</div>
+						</div>
+
+						<!-- Безалкогольные напитки -->
+						<div class="slider-menu__slide">
+							<div class="bar-menu__item br-32">
+								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/soft-drink.jpg" alt="Безалкогольные напитки">
+								<h3 class="bar-menu__item-title">Безалкогольные напитки</h3>
+								<a href="./img/bar-menu/menu-list/soft-drink-menu.jpg" class="btn btn--green bar-menu__item-btn"
+									data-fancybox="gallery-menu">
+									<span class="btn-text">Смотреть меню</span>
+									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/soft-drink-menu.jpg" alt="Безалкогольные напитки">
+								</a>
+							</div>
+						</div>
+
+						<!-- Домашние десерты -->
+						<div class="slider-menu__slide">
+							<div class="bar-menu__item br-32">
+								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/dessert.jpg" alt="Домашние десерты">
+								<h3 class="bar-menu__item-title">Десерты</h3>
+								<a href="./img/bar-menu/menu-list/dessert-menu.jpg" class="btn btn--green bar-menu__item-btn" data-fancybox="gallery-menu">
+									<span class="btn-text">Смотреть меню</span>
+									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/dessert-menu.jpg" alt="Домашние десерты">
+								</a>
+							</div>
+						</div>
+
+						<!-- Алкоголь -->
+						<div class="slider-menu__slide">
+							<div class="bar-menu__item br-32">
+								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/alcohol.jpg" alt="Алкоголь">
+								<h3 class="bar-menu__item-title">Алкоголь</h3>
+								<a href="./img/bar-menu/menu-list/alcohol-menu_1.jpg" class="btn btn--green bar-menu__item-btn"
+									data-fancybox="gallery-menu">
+									<span class="btn-text">Смотреть меню</span>
+									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/alcohol-menu_1.jpg" alt="Виски">
+								</a>
+								<a href="./img/bar-menu/menu-list/alcohol-menu_2.jpg" class="is-hidden" data-fancybox="gallery-menu">
+									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_2.jpg" alt="Виски">
+								</a>
+								<a href="./img/bar-menu/menu-list/alcohol-menu_3.jpg" class="is-hidden" data-fancybox="gallery-menu">
+									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_3.jpg" alt="Водка и Ликеры">
+								</a>
+								<a href="./img/bar-menu/menu-list/alcohol-menu_4.jpg" class="is-hidden" data-fancybox="gallery-menu">
+									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_4.jpg" alt="Джин, Текила, Ром">
+								</a>
+								<a href="./img/bar-menu/menu-list/alcohol-menu_5.jpg" class="is-hidden" data-fancybox="gallery-menu">
+									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_5.jpg" alt="Коньяк и Вермут">
+								</a>
+								<a href="./img/bar-menu/menu-list/alcohol-menu_6.jpg" class="is-hidden" data-fancybox="gallery-menu">
+									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_6.jpg" alt="Вино, Портвеин, Горячие напитки">
+								</a>
+								<a href="./img/bar-menu/menu-list/alcohol-menu_7.jpg" class="is-hidden" data-fancybox="gallery-menu">
+									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_7.jpg" alt="Игристое вино и Long Drink">
+								</a>
+								<a href="./img/bar-menu/menu-list/alcohol-menu_8.jpg" class="is-hidden" data-fancybox="gallery-menu">
+									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_8.jpg" alt="Lond Drink">
+								</a>
+								<a href="./img/bar-menu/menu-list/alcohol-menu_9.jpg" class="is-hidden" data-fancybox="gallery-menu">
+									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_9.jpg" alt="Shots">
+								</a>
+								<a href="./img/bar-menu/menu-list/alcohol-menu_10.jpg" class="is-hidden" data-fancybox="gallery-menu">
+									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_10.jpg" alt="Shots">
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- <a href="https://drive.google.com/file/d/18S7vO8cWhKjtRg-Mgq4tQN5wV239OQDH/view?usp=share_link"
+						class="btn btn--green bar-menu__btn" target="_blank">Смотреть все
+						меню</a> -->
+
+					<a href="./img/bar-menu/menu-list/beer-menu.jpg" data-fancybox="gallery-menu" class="btn btn--green bar-menu__btn">Смотреть
+						все
+						меню</a>
+				</div>
+			</section>
+			<!----------- End Бар Меню ------------->
+
+			<!----------- Бар Меню ------------->
+			<section class="sect-padd bar-menu" id="bar-menu">
+				<div class="container">
+					<h2 class="sect-title bar-menu__title text-center"><span class="text-gold--dark">Меню</span> нашего паба</h2>
+
+					<div class="bar-menu__list slider-menu">
+						<div class="slider-menu__slide">
+							<a class="bar-menu__item br-32" href="./menu/beer.pdf" target="_blank">
+								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/beer.jpg" alt="Пиво">
+								<h3 class="bar-menu__item-title">Пиво</h3>
+								<button class="btn btn--green bar-menu__item-btn">Смотреть меню</button>
+							</a>
+						</div>
+
+						<div class="slider-menu__slide">
+							<a class="bar-menu__item br-32" href="./menu/food.pdf" target="_blank">
+								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/hot-snacks.jpg" alt="Еда">
+								<h3 class="bar-menu__item-title">Еда</h3>
+								<button class="btn btn--green bar-menu__item-btn">Смотреть меню</button>
+							</a>
+						</div>
+
+						<div class="slider-menu__slide">
+							<a class="bar-menu__item br-32" href="./menu/alcohol.pdf" target="_blank">
+								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/alcohol.jpg" alt="Алкоголь">
+								<h3 class="bar-menu__item-title">Барная карта</h3>
+								<button class="btn btn--green bar-menu__item-btn">Смотреть меню</button>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!----------- End Бар Меню ------------->
+
+			<!----------- Фотографии ------------->
+			<section class="sect-padd portfolio" id="portfolio">
+				<div class="container">
+					<div class="sect-title portfolio__head">
+						<h2 class="portfolio__title">Наши <span class="text-gold">фотографии</span></h2>
+						<p class="portfolio__descr">Подборка самых лучших моментов, которые мы запечатлели в нашем заведении.</p>
+					</div>
+
+					<div class="portfolio__photos">
+						<div class="portfolio__item">
+							<a class="gallery-link" href="./img/portfolio/portfolio-photo_1.jpg" data-fancybox="gallery-portfolio">
+								<img loading="lazy" class="portfolio__img" src="./img/portfolio/portfolio-photo_1.jpg" />
+							</a>
+						</div>
+
+						<div class="portfolio__item">
+							<a class="gallery-link" href="./img/portfolio/portfolio-photo_2.jpg" data-fancybox="gallery-portfolio">
+								<img loading="lazy" class="portfolio__img" src="./img/portfolio/portfolio-photo_2.jpg" />
+							</a>
+						</div>
+
+						<div class="portfolio__item">
+							<a class="gallery-link" href="./img/portfolio/portfolio-photo_3.jpg" data-fancybox="gallery-portfolio">
+								<img loading="lazy" class="portfolio__img" src="./img/portfolio/portfolio-photo_3.jpg" />
+							</a>
+						</div>
+
+						<div class="portfolio__item">
+							<a class="gallery-link" href="./img/portfolio/portfolio-photo_4.jpg" data-fancybox="gallery-portfolio">
+								<img loading="lazy" class="portfolio__img" src="./img/portfolio/portfolio-photo_4.jpg" />
+							</a>
+						</div>
+
+						<div class="portfolio__item">
+							<a class="gallery-link" href="./img/portfolio/portfolio-photo_5.jpg" data-fancybox="gallery-portfolio">
+								<img loading="lazy" class="portfolio__img" src="./img/portfolio/portfolio-photo_5.jpg" />
+							</a>
+						</div>
+
+						<div class="portfolio__item">
+							<a class="gallery-link" href="./img/portfolio/portfolio-photo_6.jpg" data-fancybox="gallery-portfolio">
+								<img loading="lazy" class="portfolio__img" src="./img/portfolio/portfolio-photo_6.jpg" />
+							</a>
+						</div>
+
+						<div class="portfolio__item">
+							<a class="gallery-link" href="./img/portfolio/portfolio-photo_7.jpg" data-fancybox="gallery-portfolio">
+								<img loading="lazy" class="portfolio__img" src="./img/portfolio/portfolio-photo_7.jpg" />
+							</a>
+						</div>
+
+						<div class="portfolio__item">
+							<a class="gallery-link" href="./img/portfolio/portfolio-photo_8.jpg" data-fancybox="gallery-portfolio">
+								<img loading="lazy" class="portfolio__img" src="./img/portfolio/portfolio-photo_8.jpg" />
+							</a>
+						</div>
+
+						<div class="portfolio__item">
+							<a class="gallery-link" href="./img/portfolio/portfolio-photo_9.jpg" data-fancybox="gallery-portfolio">
+								<img loading="lazy" class="portfolio__img" src="./img/portfolio/portfolio-photo_9.jpg" />
+							</a>
+						</div>
+
+						<div class="portfolio__item">
+							<a class="gallery-link" href="./img/portfolio/portfolio-photo_10.jpg" data-fancybox="gallery-portfolio">
+								<img loading="lazy" class="portfolio__img" src="./img/portfolio/portfolio-photo_10.jpg" />
+							</a>
+						</div>
+
+						<div class="portfolio__item">
+							<a class="gallery-link" href="./img/portfolio/portfolio-photo_11.jpg" data-fancybox="gallery-portfolio">
+								<img loading="lazy" class="portfolio__img" src="./img/portfolio/portfolio-photo_11.jpg" />
+							</a>
+						</div>
+
+						<div class="portfolio__item">
+							<a class="gallery-link" href="./img/portfolio/portfolio-photo_12.jpg" data-fancybox="gallery-portfolio">
+								<img loading="lazy" class="portfolio__img" src="./img/portfolio/portfolio-photo_12.jpg" />
+							</a>
+						</div>
+					</div>
+
+					<div class="portfolio__btn">
+						<a href="https://yandex.ru/maps/org/the_pub/1223769808/gallery/?ll=30.293117%2C59.956710&photos%5Bbusiness%5D=1223769808&tab=gallery&z=15.53"
+							class="btn btn__outline" target="_blank">Смотреть больше фото</a>
+					</div>
+				</div>
+			</section>
+			<!----------- End Фотографии ------------->
+
+			<!-- Мероприятия -->
+			<section class="sect-padd events is-hidden" id="events">
+				<div class="container">
+					<h2 class="sect-title events__title"><span class="h-mob">Ближайшие</span> <span class="text-gold--dark">мероприятия</span>
+					</h2>
+
+					<ul class="events__list">
+						<li class="events__item">
+							<div class="events__item-img br-32">
+								<img loading="lazy" src="img/events/event-photo_1.jpg" width="" height="" alt="">
+							</div>
+							<div class="events__item-content">
+								<div class="events__item-date">23.02.2023–19:00</div>
+								<h3 class="events__item-title">Dirty Freaks</h3>
+								<p class="events__item-descr">Наше дело не так однозначно, как может показаться: убеждённость некоторых оппонентов
+									играет
+									важную роль в формировании стандартных подходов.</p>
+								<button class="events__item-link js-modal-btn" data-modal-open="modal-bron">Забронировать столик</button>
+							</div>
+						</li>
+
+						<li class="events__item">
+							<div class="events__item-img br-32">
+								<img loading="lazy" src="img/events/event-photo_2.jpg" width="" height="" alt="">
+							</div>
+							<div class="events__item-content">
+								<div class="events__item-date">23.02.2023–19:00</div>
+								<h3 class="events__item-title">Dirty Freaks</h3>
+								<p class="events__item-descr">Наше дело не так однозначно, как может показаться: убеждённость некоторых оппонентов
+									играет
+									важную роль в формировании стандартных подходов.</p>
+								<button class="events__item-link js-modal-btn" data-modal-open="modal-bron">Забронировать столик</button>
+							</div>
+						</li>
+
+						<li class="events__item">
+							<div class="events__item-img br-32">
+								<img loading="lazy" src="img/events/event-photo_3.jpg" width="" height="" alt="">
+							</div>
+							<div class="events__item-content">
+								<div class="events__item-date">23.02.2023–19:00</div>
+								<h3 class="events__item-title">Dirty Freaks</h3>
+								<p class="events__item-descr">Наше дело не так однозначно, как может показаться: убеждённость некоторых оппонентов
+									играет
+									важную роль в формировании стандартных подходов.</p>
+								<button class="events__item-link js-modal-btn" data-modal-open="modal-bron">Забронировать столик</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- End Мероприятия -->
+
+			<!-- Отзывы -->
+			<section class="sect-padd reviews" id="reviews">
+				<div class="reviews__overlay-bg"></div>
+				<div class="container">
+
+					<div class="sect-title reviews__head">
+						<h2 class="reviews__title"><span class="text-gold">Отзывы</span> <span class="h-mob">посетителей</span></h2>
+						<a href="https://yandex.ru/maps/org/the_pub/1223769808/reviews/?ll=30.293117%2C59.956710&z=15" class="reviews__link"
+							target="_blank">Больше отзывов</a>
+					</div>
+
+					<!-- Отзвы список -->
+					<ul class="reviews__list">
+
+						<!-- отзыв-1 -->
+						<div class="reviews__item">
+							<div class="reviews__item-head">
+								<div class="reviews__item-name">Станислав Дорохов</div>
+								<div class="reviews__item-rating"></div>
+							</div>
+							<p class="reviews__item-text">Достойное место. Приветливый, хорошо обученный персонал. Приятная атмосфера. Пиво вкусное.
+								Ценник, правда, выше среднего. По косвенным признакам понятно, что в данном заведении НЕгетеросексуальность
+								НЕ приветствуется. Это также внушает сдержанный оптимизм и спокойствие.</p>
+						</div>
+
+						<!-- отзыв-2 -->
+						<div class="reviews__item">
+							<div class="reviews__item-head">
+								<div class="reviews__item-name">София Захарова</div>
+								<div class="reviews__item-rating"></div>
+							</div>
+							<p class="reviews__item-text">Несколько лет назад зашла в бар на пару бокальчиков. И теперь бар стал буквально вторым
+								домом:)
+								в позитивном смысле. Хороший алкоголь, ненавязчивый френдли сервис. А теперь ещё и новое обновлённое меню кухни, которое
+								очень
+								ждали))</p>
+						</div>
+
+						<!-- отзыв-3 -->
+						<div class="reviews__item">
+							<div class="reviews__item-head">
+								<div class="reviews__item-name">Андрей Т.</div>
+								<div class="reviews__item-rating"></div>
+							</div>
+							<p class="reviews__item-text">Приятное атмосферное место! Бармены с чувством юмора! Ну и конечно настойки и наливки-ВО!
+								Рекомендую для тех кто устал от шума толпы, прогулок с семьей, оставьте детей в гостинице а сами сюда. Впервые посмотрел
+								американский женский футбол, )))</p>
+						</div>
+
+						<!-- отзыв-4 -->
+						<div class="reviews__item">
+							<div class="reviews__item-head">
+								<div class="reviews__item-name">Юлия Щербакова</div>
+								<div class="reviews__item-rating"></div>
+							</div>
+							<p class="reviews__item-text">Прекрасное заведение! Была давным давно, сегодня забежала, но вернуться боюсь не успею.
+								Зависла
+								в Бражнике до 2 Персонал девушки очень приветливые и приятные. Обязательно вернусь. Все очень нравится) просто от Ленина
+								14 далековато)</p>
+						</div>
+
+						<!-- отзыв-5 -->
+						<div class="reviews__item">
+							<div class="reviews__item-head">
+								<div class="reviews__item-name">Лобойко Никита</div>
+								<div class="reviews__item-rating"></div>
+							</div>
+							<p class="reviews__item-text">Простое, душевное заведение, в которое приятно возвращаться шумной компанией друзей.
+								Соотношение
+								цены и качества вкупе с локацией радует. Этот бар не удивит вас особенным ремонтом, чудесами высокой кухни или званием
+								«модного места», но в этом его и фишка. Все просто, быстро, вкусно + клёвый антураж. Зайти компанией друзей, выпить,
+								сыграть
+								партию в настольный футбол — огонь!</p>
+						</div>
+
+						<!-- отзыв-6 -->
+						<div class="reviews__item">
+							<div class="reviews__item-head">
+								<div class="reviews__item-name">Александр К.</div>
+								<div class="reviews__item-rating"></div>
+							</div>
+							<p class="reviews__item-text">Отличный уютный паб. Душевные бармены, пиво в ассортименте и классные закуски. Есть кикер и
+								игровая приставка. Обязательно попробуйте гренки из печи. Это просто бомба!</p>
+						</div>
+					</ul>
+					<!-- End Отзвы список -->
+
+					<div class="reviews__footer">
+						<a href="https://yandex.ru/maps/org/the_pub/1223769808/reviews/?add-review=true&ll=30.293117%2C59.956710&tab=reviews&z=15.53"
+							class="btn btn__outline reviews__btn" target="_blank">Оставить свой отзыв</a>
+					</div>
+				</div>
+			</section>
+			<!-- End Отзывы -->
+
+			<!-- Контакты -->
+			<section class="sect-padd contacts" id="contacts">
+				<div class="container contacts__container">
+
+					<!-- Информация -->
+					<div class="contacts__info">
+						<h2 class="sect-title contacts__title">Контакты</h2>
+
+						<ul class="contacts__list">
+							<!-- Адрес -->
+							<li class="contacts__item contacts__address">
+								<div class="contacts__item-head"><i class="icon-ui ic-loc"></i>Адрес:</div>
+								<p>г. Санкт-Петербург, Петроградская сторона, ул. Пионерская улица, д. 11.</p>
+							</li>
+
+							<!-- Режим работы -->
+							<li class="contacts__item contacts__address">
+								<div class="contacts__item-head"><i class="icon-ui ic-time"></i>Режим работы:</div>
+								<p>Пн-Ср: с 15:00 до 3:00 / Чт-Сб: с 15:00 до 6:00 / Вс: с 15:00 до 3:00</p>
+							</li>
+
+							<!-- Телефоны бронирования -->
+							<li class="contacts__item contacts__address">
+								<div class="contacts__item-head"><i class="icon-ui ic-phone"></i>Телефоны бронирования:</div>
+								<div class="contacts__phones">
+									<a class="contacts__link contacts__phone" href="tel:+78129973198">+7 (812) 997-31-98</a>
+									<a class="contacts__link contacts__phone" href="tel:+78129973198">+7 (921) 997-31-98</a>
+								</div>
+							</li>
+
+							<!-- Социальные сети -->
+							<li class="contacts__item contacts__address">
+								<ul class="social-contacts social">
+									<li class="social__item">
+										<a class="social__link" href="https://vk.com/barhata" target="_blank">
+											<svg class="ic-vk" width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M17.9828 5.71268C18.0995 5.32518 17.9828 5.04102 17.4312 5.04102H15.6037C15.1387 5.04102 14.9262 5.28685 14.8095 5.55685C14.8095 5.55685 13.8803 7.82268 12.5637 9.29185C12.1387 9.71935 11.9445 9.85435 11.7128 9.85435C11.597 9.85435 11.4287 9.71935 11.4287 9.33185V5.71268C11.4287 5.24768 11.2945 5.04102 10.907 5.04102H8.03533C7.74533 5.04102 7.57032 5.25602 7.57032 5.46102C7.57032 5.90102 8.22866 6.00268 8.29616 7.24268V9.93268C8.29616 10.5218 8.19033 10.6293 7.95699 10.6293C7.33783 10.6293 5.83116 8.35518 4.93699 5.75185C4.76283 5.24602 4.58699 5.04185 4.12033 5.04185H2.29366C1.77116 5.04185 1.66699 5.28768 1.66699 5.55768C1.66699 6.04268 2.28616 8.44268 4.55116 11.6168C6.06116 13.7843 8.18699 14.9593 10.1237 14.9593C11.2845 14.9593 11.4278 14.6985 11.4278 14.2485V12.6102C11.4278 12.0885 11.5387 11.9835 11.9062 11.9835C12.1762 11.9835 12.6412 12.1202 13.7253 13.1643C14.9637 14.4027 15.1687 14.9585 15.8645 14.9585H17.6912C18.2128 14.9585 18.4737 14.6977 18.3237 14.1827C18.1595 13.6702 17.5678 12.9243 16.7828 12.0418C16.3562 11.5385 15.7187 10.9968 15.5245 10.726C15.2537 10.3768 15.332 10.2227 15.5245 9.91268C15.5253 9.91352 17.7512 6.77852 17.9828 5.71268Z"
+													fill="currentColor" />
+											</svg>
+										</a>
+									</li>
+
+									<li class="social__item">
+										<a class="social__link" href="https://t.me/thepubspb" target="_blank">
+											<svg class="ic-telegram" width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M17.2208 3.59784L2.44583 9.29534C1.4375 9.70034 1.44333 10.2628 2.26083 10.5137L6.05416 11.697L14.8308 6.1595C15.2458 5.907 15.625 6.04284 15.3133 6.3195L8.2025 12.737H8.20083L8.2025 12.7378L7.94083 16.6478C8.32416 16.6478 8.49333 16.472 8.70833 16.2645L10.5508 14.4728L14.3833 17.3037C15.09 17.6928 15.5975 17.4928 15.7733 16.6495L18.2892 4.79284C18.5467 3.76034 17.895 3.29284 17.2208 3.59784Z"
+													fill="currentColor" />
+											</svg>
+										</a>
+									</li>
+
+									<li class="social__item">
+										<a class="social__link" href="https://www.tiktok.com/@thepub.spb?_t=8aJOQC6FORm" target="_blank">
+											<svg ic-tiktok width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M16.3251 5.57508C15.4944 5.39241 14.7429 4.95128 14.1785 4.31499C13.6141 3.67871 13.2657 2.87997 13.1835 2.03341V1.66675H10.3085V13.0584C10.309 13.5639 10.1506 14.0567 9.85549 14.4671C9.56041 14.8775 9.14368 15.1847 8.66434 15.3451C8.185 15.5055 7.66733 15.511 7.18469 15.3608C6.70204 15.2107 6.27887 14.9124 5.97512 14.5084C5.70299 14.1508 5.53636 13.7241 5.49406 13.2767C5.45176 12.8293 5.53549 12.379 5.73577 11.9767C5.93605 11.5745 6.2449 11.2362 6.62738 11.0003C7.00987 10.7644 7.45073 10.6402 7.90012 10.6417C8.14865 10.6403 8.39595 10.6769 8.63345 10.7501V7.83341C8.35707 7.79919 8.07854 7.78526 7.80012 7.79175C6.77455 7.81915 5.77922 8.14503 4.93602 8.72947C4.09283 9.31392 3.43836 10.1316 3.05277 11.0823C2.66717 12.033 2.56719 13.0755 2.76505 14.0822C2.96292 15.0889 3.45005 16.016 4.16679 16.7501C4.90136 17.4969 5.84136 18.0085 6.86737 18.2199C7.89337 18.4313 8.95905 18.3329 9.929 17.9372C10.899 17.5416 11.7294 16.8665 12.3148 15.9978C12.9002 15.1291 13.2142 14.106 13.2168 13.0584V7.22508C14.3763 8.05337 15.7668 8.49645 17.1918 8.49175V5.65841C16.9119 5.65957 16.6326 5.63164 16.3585 5.57508H16.3251Z"
+													fill="currentColor" />
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Карта -->
+					<div class="contacts__map">
+						<img class="contacts__map-img" loading="lazy" src="img/contact-img.jpg" width="220" height="220" alt="The Pub">
+						<iframe
+							src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa2b82e98ebf6458884db3308fae61283c472eb07019a8b98c75d27c9b5b48462&amp;source=constructor"
+							width="100%" height="100%" frameborder="0">
+						</iframe>
+					</div>
+				</div>
+			</section>
+			<!-- / Контакты -->
+		</main>
+		<!----------- /Main ------------->
+
+		<!----------- Footer ------------->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__content">
+					<p class="footer__copyright">thepub.ru © 2016-2023. Все права защищены.</p>
+					<!-- <a href="#privacy.html" class="footer__privacy" target="_blank">Политика конфиденциальности</a> -->
+				</div>
+			</div>
+		</footer>
+		<!----------- Footer ------------->
+	</div>
+	<!----------- End Wrapper ------------->
+
+	<!----------- Modals ------------->
+
+	<!-- Modal Video -->
+	<div class="modal modal-video" data-modal="modal-video">
+		<div class="modal__overlay">
+			<div class="modal__body">
+				<div class="modal__close"></div>
+				<div class="video-tour">
+					<!-- <iframe width="640" height="480" src="https://www.youtube.com/embed/zle-wxWqrbQ" frameborder="0" allowfullscreen></iframe> -->
+
+					<video id="my-video" class="video-js" controls preload="auto" width="640" height="" poster="./img/hero-bg.jpg" data-setup="{}">
+						<source src="./video/video-tour.mp4" type="video/mp4" />
+						<source src="./video/video-tour.webm" type="video/webm" />
+					</video>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Modal Video -->
+
+	<!-- Modal Bron -->
+	<div class="modal modal-bron" data-modal="modal-bron">
+		<div class="modal__overlay">
+			<div class="modal__body text-center">
+				<div class="modal__close"></div>
+				<div class="modal__logo"><img src="img/logo.png" width="105" height="100" alt="The Pub"></div>
+				<div class="modal__title">Забронировать стол</div>
+				<div class="modal__descr">Позвоните по указанному телефону или напишите в социальной сети:</div>
+				<a href="" class="modal-bron__phone">+7 812 997-31-98</a>
+
+				<ul class="social-contacts social is-hidden">
+					<li class="social__item">
+						<a class="social__link" href="https://www.tiktok.com/@thepub.spb?_t=8aJOQC6FORm" target="_blank">
+							<svg ic-tiktok width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M16.3251 5.57508C15.4944 5.39241 14.7429 4.95128 14.1785 4.31499C13.6141 3.67871 13.2657 2.87997 13.1835 2.03341V1.66675H10.3085V13.0584C10.309 13.5639 10.1506 14.0567 9.85549 14.4671C9.56041 14.8775 9.14368 15.1847 8.66434 15.3451C8.185 15.5055 7.66733 15.511 7.18469 15.3608C6.70204 15.2107 6.27887 14.9124 5.97512 14.5084C5.70299 14.1508 5.53636 13.7241 5.49406 13.2767C5.45176 12.8293 5.53549 12.379 5.73577 11.9767C5.93605 11.5745 6.2449 11.2362 6.62738 11.0003C7.00987 10.7644 7.45073 10.6402 7.90012 10.6417C8.14865 10.6403 8.39595 10.6769 8.63345 10.7501V7.83341C8.35707 7.79919 8.07854 7.78526 7.80012 7.79175C6.77455 7.81915 5.77922 8.14503 4.93602 8.72947C4.09283 9.31392 3.43836 10.1316 3.05277 11.0823C2.66717 12.033 2.56719 13.0755 2.76505 14.0822C2.96292 15.0889 3.45005 16.016 4.16679 16.7501C4.90136 17.4969 5.84136 18.0085 6.86737 18.2199C7.89337 18.4313 8.95905 18.3329 9.929 17.9372C10.899 17.5416 11.7294 16.8665 12.3148 15.9978C12.9002 15.1291 13.2142 14.106 13.2168 13.0584V7.22508C14.3763 8.05337 15.7668 8.49645 17.1918 8.49175V5.65841C16.9119 5.65957 16.6326 5.63164 16.3585 5.57508H16.3251Z"
+									fill="currentColor" />
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="social__link" href="https://t.me/thepubspb" target="_blank">
+							<svg class="ic-telegram" width="20" height="20" viewbox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M17.2208 3.59784L2.44583 9.29534C1.4375 9.70034 1.44333 10.2628 2.26083 10.5137L6.05416 11.697L14.8308 6.1595C15.2458 5.907 15.625 6.04284 15.3133 6.3195L8.2025 12.737H8.20083L8.2025 12.7378L7.94083 16.6478C8.32416 16.6478 8.49333 16.472 8.70833 16.2645L10.5508 14.4728L14.3833 17.3037C15.09 17.6928 15.5975 17.4928 15.7733 16.6495L18.2892 4.79284C18.5467 3.76034 17.895 3.29284 17.2208 3.59784Z"
+									fill="currentColor" />
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="social__link" href="https://vk.com/barhata" target="_blank">
+							<svg class="ic-vk" width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M17.9828 5.71268C18.0995 5.32518 17.9828 5.04102 17.4312 5.04102H15.6037C15.1387 5.04102 14.9262 5.28685 14.8095 5.55685C14.8095 5.55685 13.8803 7.82268 12.5637 9.29185C12.1387 9.71935 11.9445 9.85435 11.7128 9.85435C11.597 9.85435 11.4287 9.71935 11.4287 9.33185V5.71268C11.4287 5.24768 11.2945 5.04102 10.907 5.04102H8.03533C7.74533 5.04102 7.57032 5.25602 7.57032 5.46102C7.57032 5.90102 8.22866 6.00268 8.29616 7.24268V9.93268C8.29616 10.5218 8.19033 10.6293 7.95699 10.6293C7.33783 10.6293 5.83116 8.35518 4.93699 5.75185C4.76283 5.24602 4.58699 5.04185 4.12033 5.04185H2.29366C1.77116 5.04185 1.66699 5.28768 1.66699 5.55768C1.66699 6.04268 2.28616 8.44268 4.55116 11.6168C6.06116 13.7843 8.18699 14.9593 10.1237 14.9593C11.2845 14.9593 11.4278 14.6985 11.4278 14.2485V12.6102C11.4278 12.0885 11.5387 11.9835 11.9062 11.9835C12.1762 11.9835 12.6412 12.1202 13.7253 13.1643C14.9637 14.4027 15.1687 14.9585 15.8645 14.9585H17.6912C18.2128 14.9585 18.4737 14.6977 18.3237 14.1827C18.1595 13.6702 17.5678 12.9243 16.7828 12.0418C16.3562 11.5385 15.7187 10.9968 15.5245 10.726C15.2537 10.3768 15.332 10.2227 15.5245 9.91268C15.5253 9.91352 17.7512 6.77852 17.9828 5.71268Z"
+									fill="currentColor" />
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- End Modal Bron -->
+
+	<!----------- End Modals ------------->
+
+	<!----------- Scripts ------------->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+	<script defer src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+	<script defer src="./js/modernizr-webp.js"></script>
+	<script defer src="./js/main.min.js"></script>
+</body>
+
+</html>

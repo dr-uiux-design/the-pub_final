@@ -1,0 +1,243 @@
+/* ------------------- Modal Global -------------------- */
+
+// Цвет затемнения
+$modal-overlay: rgba($color--bg-dark, 0.8);
+$modal-width: 800px;
+
+// Стили для .modal__body
+$modal-content-width: 640px;
+$modal-bg: $color--bg-dark;
+$modal-radius: clamp(1rem, 5vw, 2rem);
+$modal-anim: translateY(-200px);
+
+// Стили модального окна
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+  pointer-events: none;
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: $modal-overlay;
+    display: flex;
+    padding: 24px 16px;
+  }
+
+  &__body {
+    width: 100%;
+    max-height: 90%;
+    max-width: $modal-content-width;
+    margin: auto;
+    overflow: auto;
+    background: $modal-bg;
+    border: 4px solid rgba(#fff, 0.2);
+    border-radius: $modal-radius;
+    transform: $modal-anim;
+    padding: 48px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+  }
+
+  &__close {
+    cursor: pointer;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../img/icons/ic-close_m.svg");
+    background-size: cover;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: rotate(180deg);
+      opacity: 1;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    font-family: $font--title;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(1.75rem, 1.25rem + 2.5vw, 2.5rem);
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: #ffffff;
+  }
+
+  &__btn {
+    margin-top: 32px;
+  }
+
+  // Открытое модальное окно
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+
+    .modal__body {
+      transform: none;
+    }
+  }
+}
+/* ------------------- / Modal -------------------- */
+
+/* ------------------- Modal Start -------------------- */
+.modal-start {
+  transition: all 0.5s ease-in-out;
+  // opacity: 1;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: $modal-overlay;
+    backdrop-filter: blur(20px);
+    display: flex;
+    padding: 24px 16px;
+  }
+
+  .modal__body {
+    padding: 48px;
+    transform: none;
+  }
+
+  .modal__descr {
+    font-size: 16px;
+  }
+
+  .modal__btn {
+    color: $color--gold;
+  }
+
+  &.is-hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+/* ------------------- Modal Video -------------------- */
+.modal-video {
+  .modal__overlay {
+    padding: 20px 16px;
+  }
+
+  .modal__body {
+    background: transparent;
+    border-radius: 0;
+    max-height: inherit;
+    overflow: inherit;
+    min-height: inherit;
+    // border: 4px solid #3c3c3c;
+    border: none;
+    max-width: 800px;
+    padding: 0;
+  }
+
+  .modal__close {
+    width: 32px;
+    height: 32px;
+    background: url("../img/icons/ic-close_m.svg") no-repeat center;
+    background-size: cover;
+    top: -40px;
+    right: -40px;
+    opacity: 1;
+    @media (max-width: 800px) {
+      right: 0;
+      top: -48px;
+    }
+  }
+
+  // iframe {
+  //   border-radius: 24px;
+  // }
+}
+
+/* ------------------- Modal Bron -------------------- */
+.modal-bron {
+  .modal-bron__phone {
+    cursor: pointer;
+    display: inline-block;
+    font-family: $font--title;
+    font-size: clamp(1.5rem, 0.75rem + 2.5vw, 2rem);
+    line-height: 1;
+    color: #fff;
+    margin-top: 24px;
+    &:hover {
+      text-decoration: none;
+      color: $color--gold;
+    }
+  }
+
+  .social-contacts {
+    margin-top: 24px;
+    justify-content: center;
+  }
+}
+
+// Media
+@media (max-width: 600px) {
+  .modal-video .modal__body {
+    border-radius: 0px;
+    border: none;
+  }
+  .modal-video iframe {
+    border-radius: 0px;
+    border: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal__logo {
+    margin-bottom: 24px;
+  }
+  .modal__logo img {
+    width: auto;
+    height: 80px;
+  }
+
+  .modal-start {
+    padding: 0;
+
+    .modal__overlay {
+      padding: 24px;
+    }
+
+    .modal__body {
+      width: 100%;
+      max-width: 100%;
+      height: 100vh;
+      max-height: 100%;
+      border-radius: 0;
+      border: none;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .modal-bron .modal__body {
+    padding: 32px 24px;
+  }
+}

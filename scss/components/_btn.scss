@@ -1,0 +1,97 @@
+// Buttons
+.btn {
+  @include reset-btn;
+  @include trans-btn;
+  cursor: pointer;
+  display: inline-block;
+  padding: 20px 32px;
+  background: $color--primary;
+  border-radius: 12px;
+  color: $color--bg-dark;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+
+  &:hover {
+    text-decoration: none;
+    background: #f5c35c;
+    transform: scale(1.02);
+  }
+
+  &:active {
+    background: #cd9e3c;
+  }
+
+  &--green {
+    color: #fff;
+    background: $color--green;
+    &:hover {
+      color: #fff;
+      background: #35a670;
+    }
+
+    &:active {
+      background: #0b7c46;
+    }
+  }
+
+  &__outline {
+    color: $color--gold;
+    background: transparent;
+    border: 1px solid $color--gold;
+    &:hover {
+      color: $color--bg-dark;
+      background: $color--gold;
+      border: 1px solid transparent;
+    }
+  }
+
+  &__outline--green {
+    color: $color--green;
+    background: transparent;
+    border: 1px solid $color--green;
+    &:hover {
+      color: #fff;
+      background: $color--green;
+      border: 1px solid transparent;
+    }
+  }
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  .btn {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-group {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    .btn {
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 24px;
+  }
+  .btn-group .btn {
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+}

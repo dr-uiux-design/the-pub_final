@@ -1,0 +1,31 @@
+.footer {
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    color: rgba(175, 175, 178, 0.6);
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  &__copyright {
+    margin-right: 4px;
+  }
+
+  &__privacy {
+    color: rgba(175, 175, 178, 0.6);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__content {
+    display: block;
+    text-align: center;
+  }
+
+  .footer__copyright {
+    margin-right: 0;
+  }
+}

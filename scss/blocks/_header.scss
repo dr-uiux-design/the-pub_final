@@ -1,0 +1,382 @@
+.header {
+  width: 100%;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__top {
+    width: 100%;
+    height: 67px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 30;
+
+    &.is-fixed {
+      background: rgba($color--bg-dark, 0.7);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999;
+    }
+  }
+
+  .social {
+    @include reset-ul;
+  }
+
+  .social__item {
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  .social__link {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    opacity: 1;
+
+    &:hover .social__icon {
+      fill: $color--gold;
+    }
+  }
+
+  .social__icon {
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+    fill: #fff;
+    @include trans-link;
+  }
+
+  // Header Two
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    color: #fff;
+    padding-top: 20px;
+    position: relative;
+    z-index: 29;
+  }
+
+  &__address {
+    display: flex;
+    font-size: 16px;
+    line-height: 140%;
+    color: rgba(#fff, 0.8);
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .ic-loc {
+      width: 18px;
+      height: 18px;
+      position: relative;
+      top: 4px;
+      margin-right: 8px;
+    }
+  }
+
+  &__logo {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__phone {
+    &-label {
+      font-size: 16px;
+      line-height: 120%;
+      color: rgba(#fff, 0.8);
+      margin-bottom: 0px;
+      position: relative;
+      left: 48px;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-weight: 600;
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .phone-icon {
+    position: relative;
+    top: -12px;
+  }
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+
+  &-icon {
+    flex-shrink: 0;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: $color--gold url("../img/icons/ic_phone-call.svg") no-repeat
+      center;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+}
+
+// Buger
+.menu-burger {
+  display: none;
+  width: 30px;
+  height: 18px;
+  position: relative;
+  z-index: 40;
+  cursor: pointer;
+  animation: fade 0.3s ease-in-out;
+
+  span {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: all 0.2s;
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:last-child {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  &.is-active {
+    span {
+      transform: scale(0);
+
+      &:first-child {
+        transform: rotate(-45deg);
+        top: calc(50% - 1px);
+      }
+
+      &:last-child {
+        transform: rotate(45deg);
+        bottom: calc(50% - 1px);
+      }
+    }
+
+    @media (max-width: 800px) {
+      position: absolute;
+      top: 32px;
+      left: 40%;
+    }
+
+    @media (max-width: 480px) {
+      left: inherit;
+      right: 16px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    display: block;
+  }
+}
+
+// Menu
+.menu {
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: inline-block;
+    color: #fff;
+    font-family: $font--title;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    // font-size: 16px;
+    // line-height: 140%;
+    position: relative;
+    padding: 0 16px;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background: $color--gold;
+      position: absolute;
+      bottom: -24px;
+      left: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover.menu__link::after {
+      width: 100%;
+    }
+  }
+}
+
+.social {
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  &__item {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    .ic-tiktok {
+      position: relative;
+      top: 3px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .menu {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+    z-index: 30;
+
+    // Открытое меню на мобильных
+    &.is-active {
+      left: 0;
+    }
+  }
+
+  .menu__list {
+    width: 50%;
+    height: 100vh;
+    min-height: 90%;
+    overflow: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $color--bg-dark;
+    padding: 48px 0;
+    padding-top: 80px;
+
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+  }
+
+  .menu__item {
+    width: 100%;
+    &:not(:last-child) {
+      margin-right: 0px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .menu__link {
+    width: 100%;
+    font-family: $font--title;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #fff;
+    padding: 0 24px;
+
+    &::after {
+      bottom: -12px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header__bottom {
+    align-items: center;
+  }
+  .header__logo img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__bottom {
+    padding-top: 16px;
+  }
+
+  .header__address {
+    position: absolute;
+    top: 32px;
+    left: 72px;
+    font-size: 14px;
+  }
+
+  .header__logo {
+    order: -1;
+
+    img {
+      max-width: 60%;
+    }
+  }
+
+  .header__phone-label {
+    display: none;
+  }
+
+  .header__phone-link {
+    font-size: 0;
+    display: inline-block;
+  }
+
+  .header__phone .phone-icon {
+    width: 48px;
+    height: 48px;
+    top: inherit;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__phone .phone-icon {
+    position: relative;
+    left: 16px;
+  }
+  .header__address {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .header__top {
+    height: 50px;
+    padding: 12px 0;
+  }
+}

@@ -1,0 +1,141 @@
+.contacts {
+  &__container {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 32px;
+  }
+
+  &__item {
+    color: #fff;
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &-head {
+      display: flex;
+      align-items: center;
+      color: $color--body;
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 1;
+
+      .icon-ui {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__phones {
+    display: flex;
+  }
+
+  &__link {
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+      &::after {
+        content: "/";
+        display: inline-block;
+        margin-left: 12px;
+        opacity: 0.2;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &-img {
+      display: block;
+      width: 180px;
+      height: 180px;
+      border-radius: 24px;
+      border: 4px solid #fff;
+      position: absolute;
+      top: 24px;
+      left: 24px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 32px;
+    }
+
+    .ymaps-layers-pane {
+      filter: invert(100%);
+      -ms-filter: invert(100%);
+      -webkit-filter: invert(100%);
+      -moz-filter: invert(100%);
+      -o-filter: invert(100%);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .contacts__container {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .contacts__map {
+    height: 480px;
+  }
+
+  .contacts__address p {
+    br {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts__map-img {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts {
+    padding-top: 32px;
+  }
+  .contacts__map {
+    height: 280px;
+    iframe {
+      border-radius: 24px;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .contacts__phones {
+    flex-direction: column;
+
+    a {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  .contacts__link:not(:last-child)::after {
+    display: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

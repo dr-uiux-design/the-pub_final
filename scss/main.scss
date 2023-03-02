@@ -1,0 +1,32 @@
+// Миксины
+@import "./_mixins/reset";
+@import "./_mixins/transition";
+
+// Базовые настройки
+@import "./_config/02_reset";
+@import "./_config/03_vars";
+@import "./_config/05_base";
+
+// Компоненты
+@import "./components/preloader";
+@import "./components/modals";
+@import "./components/btn-top";
+@import "./components/btn";
+@import "./components/btn-callback";
+@import "./components/icons";
+@import "./components/slick";
+@import "./components/video-tour";
+@import "./components/social";
+@import "./components/audio-player";
+
+// Blocks
+@import "./blocks/header";
+@import "./blocks/footer";
+@import "./blocks/hero";
+@import "./blocks/about";
+@import "./blocks/music";
+@import "./blocks/bar-menu";
+@import "./blocks/portfolio";
+@import "./blocks/events";
+@import "./blocks/reviews";
+@import "./blocks/contacts";
