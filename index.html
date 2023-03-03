@@ -177,7 +177,7 @@
 				<!-- / Header -->
 
 				<!-- Video -->
-				<div class="hero__video">
+				<div class="video-hero">
 					<video loop="" muted="" autoplay="" poster="./img/hero-bg.jpg" class="hero__video">
 						<source src="./video/hero-video.mp4" type="video/mp4">
 						<source src="./video/hero-video.webp" type="video/webp">
@@ -335,191 +335,12 @@
 			<section class="sect-padd music">
 				<div class="container music__container">
 					<div class="music__content">
-						<h2 class="music__title"><span class="text-gold">Живая музыка</span><br> каждую субботу в 22:00</h2>
+						<h2 class="music__title"><span class="text-gold">Живая музыка</span><br> каждую субботу<br> в 22:00</h2>
 						<button type="button" class="btn music__btn js-modal-btn" data-modal-open="modal-bron">Забронировать столик</button>
 					</div>
 				</div>
 			</section>
 			<!----------- End Живая музыка ------------->
-
-			<!----------- Бар Меню ------------->
-			<section class="sect-padd bar-menu is-hidden">
-				<div class="container">
-					<h2 class="sect-title bar-menu__title"><span class="text-gold--dark">Меню</span> нашего паба</h2>
-
-					<div class="bar-menu__slider slider-menu">
-
-						<!-- Пиво -->
-						<div class="slider-menu__slide">
-							<div class="bar-menu__item br-32">
-								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/beer.jpg" alt="Пиво">
-								<h3 class="bar-menu__item-title">Пиво</h3>
-								<a href="./img/bar-menu/menu-list/beer-menu_1.jpg" class="btn btn--green bar-menu__item-btn" data-fancybox="gallery-menu">
-									<span class="btn-text">Смотреть меню</span>
-									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/beer-menu_1.jpg" alt="Пиво">
-								</a>
-								<a href="./img/bar-menu/menu-list/beer-menu_2.jpg" data-fancybox="gallery-menu">
-									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/beer-menu_2.jpg" alt="Пиво">
-								</a>
-							</div>
-						</div>
-
-						<!-- Горячие закуски -->
-						<div class="slider-menu__slide">
-							<div class="bar-menu__item br-32">
-								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/hot-snacks.jpg" alt="Горячие закуски">
-								<h3 class="bar-menu__item-title">Горячие закуски</h3>
-								<a href="./img/bar-menu/menu-list/hot-snacks-menu_1.jpg" class="btn btn--green bar-menu__item-btn"
-									data-fancybox="gallery-menu">
-									<span class="btn-text">Смотреть меню</span>
-									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/hot-snacks-menu_1.jpg" alt="Горячие закуски">
-								</a>
-								<a href="./img/bar-menu/menu-list/hot-snacks-menu_2.jpg" data-fancybox="gallery-menu">
-									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/hot-snacks-menu_2.jpg" alt="Горячие закуски">
-								</a>
-							</div>
-						</div>
-
-						<!-- Холодные закуски -->
-						<div class="slider-menu__slide">
-							<div class="bar-menu__item br-32">
-								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/cold-snacks.jpg" alt="Холодные закуски">
-								<h3 class="bar-menu__item-title">Холодные закуски</h3>
-								<a href="./img/bar-menu/menu-list/cold-snacks-menu.jpg" class="btn btn--green bar-menu__item-btn"
-									data-fancybox="gallery-menu">
-									<span class="btn-text">Смотреть меню</span>
-									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/cold-snacks-menu.jpg" alt="Холодные закуски">
-								</a>
-							</div>
-						</div>
-
-						<!-- Горячее -->
-						<div class="slider-menu__slide">
-							<div class="bar-menu__item br-32">
-								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/main-course.jpg" alt="Горячее">
-								<h3 class="bar-menu__item-title">Горячее</h3>
-								<a href="./img/bar-menu/menu-list/main-course-menu.jpg" class="btn btn--green bar-menu__item-btn"
-									data-fancybox="gallery-menu">
-									<span class="btn-text">Смотреть меню</span>
-									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/main-course-menu.jpg" alt="Горячее">
-								</a>
-							</div>
-						</div>
-
-						<!-- Street-Food -->
-						<div class="slider-menu__slide">
-							<div class="bar-menu__item br-32">
-								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/street-foot.jpg" alt="Street-Food">
-								<h3 class="bar-menu__item-title">Street food</h3>
-								<a href="./img/bar-menu/menu-list/street-food-menu.jpg" class="btn btn--green bar-menu__item-btn"
-									data-fancybox="gallery-menu">
-									<span class="btn-text">Смотреть меню</span>
-									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/street-food-menu.jpg" alt="Street-Food">
-								</a>
-							</div>
-						</div>
-
-						<!-- Салаты и соусы -->
-						<div class="slider-menu__slide">
-							<div class="bar-menu__item br-32">
-								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/salads.jpg" alt="Салат">
-								<h3 class="bar-menu__item-title">Салаты и соусы</h3>
-								<a href="./img/bar-menu/menu-list/salads-souce-menu.jpg" class="btn btn--green bar-menu__item-btn"
-									data-fancybox="gallery-menu">
-									<span class="btn-text">Смотреть меню</span>
-									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/salads-souce-menu.jpg" alt="Салат">
-								</a>
-							</div>
-						</div>
-
-						<!-- Супы -->
-						<div class="slider-menu__slide">
-							<div class="bar-menu__item br-32">
-								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/soups.jpg" alt="Суп">
-								<h3 class="bar-menu__item-title">Супы</h3>
-								<a href="./img/bar-menu/menu-list/soups-menu.jpg" class="btn btn--green bar-menu__item-btn" data-fancybox="gallery-menu">
-									<span class="btn-text">Смотреть меню</span>
-									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/soups-menu.jpg" alt="Суп">
-								</a>
-							</div>
-						</div>
-
-						<!-- Безалкогольные напитки -->
-						<div class="slider-menu__slide">
-							<div class="bar-menu__item br-32">
-								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/soft-drink.jpg" alt="Безалкогольные напитки">
-								<h3 class="bar-menu__item-title">Безалкогольные напитки</h3>
-								<a href="./img/bar-menu/menu-list/soft-drink-menu.jpg" class="btn btn--green bar-menu__item-btn"
-									data-fancybox="gallery-menu">
-									<span class="btn-text">Смотреть меню</span>
-									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/soft-drink-menu.jpg" alt="Безалкогольные напитки">
-								</a>
-							</div>
-						</div>
-
-						<!-- Домашние десерты -->
-						<div class="slider-menu__slide">
-							<div class="bar-menu__item br-32">
-								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/dessert.jpg" alt="Домашние десерты">
-								<h3 class="bar-menu__item-title">Десерты</h3>
-								<a href="./img/bar-menu/menu-list/dessert-menu.jpg" class="btn btn--green bar-menu__item-btn" data-fancybox="gallery-menu">
-									<span class="btn-text">Смотреть меню</span>
-									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/dessert-menu.jpg" alt="Домашние десерты">
-								</a>
-							</div>
-						</div>
-
-						<!-- Алкоголь -->
-						<div class="slider-menu__slide">
-							<div class="bar-menu__item br-32">
-								<img loading="lazy" class="bar-menu__item-img" src="./img/bar-menu/menu-photos/alcohol.jpg" alt="Алкоголь">
-								<h3 class="bar-menu__item-title">Алкоголь</h3>
-								<a href="./img/bar-menu/menu-list/alcohol-menu_1.jpg" class="btn btn--green bar-menu__item-btn"
-									data-fancybox="gallery-menu">
-									<span class="btn-text">Смотреть меню</span>
-									<img loading="lazy" class="is-hidden" src="./img/bar-menu/menu-list/alcohol-menu_1.jpg" alt="Виски">
-								</a>
-								<a href="./img/bar-menu/menu-list/alcohol-menu_2.jpg" class="is-hidden" data-fancybox="gallery-menu">
-									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_2.jpg" alt="Виски">
-								</a>
-								<a href="./img/bar-menu/menu-list/alcohol-menu_3.jpg" class="is-hidden" data-fancybox="gallery-menu">
-									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_3.jpg" alt="Водка и Ликеры">
-								</a>
-								<a href="./img/bar-menu/menu-list/alcohol-menu_4.jpg" class="is-hidden" data-fancybox="gallery-menu">
-									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_4.jpg" alt="Джин, Текила, Ром">
-								</a>
-								<a href="./img/bar-menu/menu-list/alcohol-menu_5.jpg" class="is-hidden" data-fancybox="gallery-menu">
-									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_5.jpg" alt="Коньяк и Вермут">
-								</a>
-								<a href="./img/bar-menu/menu-list/alcohol-menu_6.jpg" class="is-hidden" data-fancybox="gallery-menu">
-									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_6.jpg" alt="Вино, Портвеин, Горячие напитки">
-								</a>
-								<a href="./img/bar-menu/menu-list/alcohol-menu_7.jpg" class="is-hidden" data-fancybox="gallery-menu">
-									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_7.jpg" alt="Игристое вино и Long Drink">
-								</a>
-								<a href="./img/bar-menu/menu-list/alcohol-menu_8.jpg" class="is-hidden" data-fancybox="gallery-menu">
-									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_8.jpg" alt="Lond Drink">
-								</a>
-								<a href="./img/bar-menu/menu-list/alcohol-menu_9.jpg" class="is-hidden" data-fancybox="gallery-menu">
-									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_9.jpg" alt="Shots">
-								</a>
-								<a href="./img/bar-menu/menu-list/alcohol-menu_10.jpg" class="is-hidden" data-fancybox="gallery-menu">
-									<img loading="lazy" src="./img/bar-menu/menu-list/alcohol-menu_10.jpg" alt="Shots">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- <a href="https://drive.google.com/file/d/18S7vO8cWhKjtRg-Mgq4tQN5wV239OQDH/view?usp=share_link"
-						class="btn btn--green bar-menu__btn" target="_blank">Смотреть все
-						меню</a> -->
-
-					<a href="./img/bar-menu/menu-list/beer-menu.jpg" data-fancybox="gallery-menu" class="btn btn--green bar-menu__btn">Смотреть
-						все
-						меню</a>
-				</div>
-			</section>
-			<!----------- End Бар Меню ------------->
 
 			<!----------- Бар Меню ------------->
 			<section class="sect-padd bar-menu" id="bar-menu">
@@ -879,7 +700,7 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__content">
-					<p class="footer__copyright">thepub.ru © 2016-2023. Все права защищены.</p>
+					<p class="footer__copyright">thepub.ru © 2013-2023. Все права защищены.</p>
 					<!-- <a href="#privacy.html" class="footer__privacy" target="_blank">Политика конфиденциальности</a> -->
 				</div>
 			</div>
